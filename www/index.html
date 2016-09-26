@@ -78,6 +78,7 @@ function hueCommand(func,cmd,body,callback) {
 
   xhr.onload = function() {
     //console.log('hue:' + this.responseText);  
+	document.getElementById('trc').innerText=this.responseText;
 	callback(this.responseText);
 	};
   xhr.send(body);
